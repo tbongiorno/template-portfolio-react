@@ -1,0 +1,296 @@
+@font-face {
+  font-family: 'Chonburi';
+  src: url('/Chonburi-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+#root {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  text-align: left;
+  color: white;
+  font-family: monospace;
+}
+
+p {
+  display: inline;
+}
+
+.ascii-art {
+  height: 70px;
+  font-family: Chonburi;
+  font-size: 56px;
+  margin-bottom: 100px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  color: white;
+  gap: .5rem;
+}
+
+
+.text-container {
+  text-align: left;
+}
+
+.heading {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+}
+
+.tabs-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.tabs-header {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #2c2c2c;
+  padding-bottom: 10px;
+}
+
+.tab-button {
+  font-family: monospace;
+  padding: 10px 30px;
+  font-size: 1.1rem;
+  background: none;
+  border: none;
+  color: #888;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.tab-button.active {
+  color: #3b82f6;
+}
+
+.tab-button.active::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #3b82f6;
+}
+
+.tab-content {
+  min-height: 400px;
+}
+
+
+/* Minimal mobile adjustments */
+@media (max-width: 768px) {
+  #root {
+    padding: 1rem;
+  }
+
+  .ascii-art {
+    font-size: 34px;
+  }
+
+  .container {
+    padding: 0.5rem;
+    height: 50vh;
+  }
+
+  .profile-image {
+    width: 250px;
+    height: 250px;
+
+  }
+
+  .text-container {
+    text-align: center;
+  }
+
+  .heading {
+    font-size: .8rem;
+  }
+
+  .tabs-header {
+    gap: 20px;
+  }
+
+  .tab-button {
+    padding: 8px 15px;
+    font-size: .9rem;
+  }
+
+  .scroll-hint img {
+    width: 0px;
+    height: 0px;
+
+  }
+
+  .tabs-header {
+    gap: 0px;
+  }
+
+}
+
+
+
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 1000px;
+
+}
+
+
+/* Contact styles */
+.contact-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.contact-item {
+  padding: 20px;
+  background-color: #1c1c1c;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.contact-item:hover {
+  transform: translateY(-5px);
+}
+
+.contact-item h3 {
+  color: #3b82f6;
+  margin-bottom: 10px;
+}
+
+.contact-item a {
+  color: #d1d1d1;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+  color: #3b82f6;
+}
+
+
+.general-card {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-height: 180px;
+  gap: 20px;
+  padding: 20px;
+  background-color: #1c1c1c;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.general-image-wrapper {
+  flex: 0 0 180px;
+  height: 180px;
+  align-self: center;
+}
+
+.general-image-container {
+  width: 100%;
+  height: 100%;
+  align-self: center;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+
+}
+
+.general-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  padding: 16px;
+}
+
+.general-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+
+
+/* Responsive styling for mobile */
+@media (max-width: 768px) {
+  .general-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .general-image-wrapper {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 180px;
+    height: auto;
+  }
+
+  .general-content {
+    align-items: center;
+  }
+
+  .general-title {
+    font-size: 1.1rem;
+    text-align: left;
+  }
+
+  .general-description {
+    font-size: 0.95rem;
+    text-align: left;
+    width: 100%;
+  }
+}
+
+/* Link styling */
+.github-link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.github-link:hover {
+  text-decoration: underline;
+}
